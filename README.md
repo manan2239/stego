@@ -38,7 +38,7 @@ Traditional bit-level embedding methods act as the baseline for evaluating more 
 
 Learned steganography using convolutional neural networks.
 
-#### CNN-based Image-in-Image Steganography (`cnnStego.py`, `image_stego_cnn_gpu.py`)
+#### CNN-based Image-in-Image Steganography (`cnnStego.py`)
 
 - Encoder embeds a **secret image** into a **cover image**
 - Decoder reconstructs the hidden secret from the stego output
