@@ -1,2 +1,4 @@
 pillow
 numpy
+torch 
+torchvision
