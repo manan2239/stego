@@ -145,7 +145,6 @@ def train(args):
         torch.cuda.manual_seed_all(42)
 
     dataset=ImagePairDataset(args.data_dir, args.image_size)
-    # don't drop last batch to avoid empty dataloader when dataset < batch_size
     dataloader=DataLoader(dataset, batch_size=args.batch_size, shuffle=True, drop_last=False)
 
     encoder=Encoder(args.base_channels).to(device)
@@ -263,4 +262,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
