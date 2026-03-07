@@ -1,1 +1,8 @@
+Train:
+python cnnStego.py train --cover data/cover --secret data/secret --epochs 40 (#batch-size=4)
 
+Embed:
+python cnnStego.py embed --cover test/cover.png --secret test/secret.png --out test/stego.png
+
+Extract:
+python cnnStego.py extract --stego test/stego.png --out test/recovered.png
