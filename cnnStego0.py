@@ -6,7 +6,7 @@ but automatically accelerates using CUDA if available.
 
 Usage:
 TRAIN:
-    python cnnStego.py train 
+    python cnnStego0.py train 
     --data-dir ./data/images 
     --epochs 10 
     --batch-size 8 
@@ -14,7 +14,7 @@ TRAIN:
     --checkpoint-dir ./checkpoints
 
 TEST:
-    python cnnStego.py test 
+    python cnnStego0.py test 
     --data-dir ./data/images 
     --checkpoint ./checkpoints/epoch_10.pth 
     --output-dir ./outputs 
@@ -264,3 +264,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
