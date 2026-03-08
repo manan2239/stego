@@ -28,8 +28,8 @@ Traditional bit-level embedding methods act as the baseline for evaluating more 
 
 #### Audio Steganography (`audioStego.py`)
 
-- Hide text inside WAV audio using LSB manipulation
-- Extract embedded messages with low reconstruction error
+- Hide WAV audio inside images using LSB manipulation
+- Extract embedded audio with low reconstruction error
 - Sample-accurate modifications to keep audio artifacts minimal
 
 ---
