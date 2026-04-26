@@ -1,0 +1,77 @@
+# ─────────────────────────────────────────────────────────────────
+#  Cross-Modal INR Steganography — Project Requirements
+#  IUST Kashmir | B.Tech Final Year | Group 02
+# ─────────────────────────────────────────────────────────────────
+#
+#  Install (CPU-only, lighter download):
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+#    pip install -r requirements.txt
+#
+#  Install (with CUDA GPU support):
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#    pip install -r requirements.txt
+#
+#  NOTE: PyTorch is NOT listed here to avoid pip/CUDA conflicts.
+#        Install it separately using the commands above first.
+# ─────────────────────────────────────────────────────────────────
+
+
+# ── Core Scientific Stack ─────────────────────────────────────────
+numpy>=1.23.0
+scipy>=1.10.0
+
+
+# ── Image Processing ──────────────────────────────────────────────
+Pillow>=9.0.0                  # Image I/O (PNG, JPG, etc.)
+opencv-python>=4.7.0           # Advanced image ops, steganalysis
+imageio>=2.28.0                # Multi-format image/video I/O
+scikit-image>=0.20.0           # SSIM, PSNR, image quality metrics
+
+
+# ── Audio Processing ──────────────────────────────────────────────
+torchaudio>=0.13.0             # Audio INR (install alongside torch)
+librosa>=0.10.0                # Audio feature extraction, spectrograms
+soundfile>=0.12.0              # Audio file I/O (WAV, FLAC)
+
+
+# ── Deep Learning Utilities ───────────────────────────────────────
+torchvision>=0.14.0            # Image transforms, pretrained models
+einops>=0.6.0                  # Elegant tensor reshaping
+timm>=0.9.0                    # Pretrained vision models (for steganalysis)
+
+
+# ── Training & Experiment Tracking ───────────────────────────────
+tqdm>=4.65.0                   # Progress bars
+tensorboard>=2.13.0            # Training visualization
+wandb>=0.15.0                  # Optional: experiment tracking (wandb.ai)
+
+
+# ── Metrics & Evaluation ──────────────────────────────────────────
+lpips>=0.1.4                   # Perceptual similarity metric
+pytorch-msssim>=0.2.1          # MS-SSIM loss (differentiable)
+
+
+# ── Steganalysis (detection resistance testing) ───────────────────
+# SRM filters and steganalysis features — pure numpy/scipy
+# (No separate package; implemented using scipy + numpy in project code)
+
+
+# ── Data Handling ─────────────────────────────────────────────────
+h5py>=3.8.0                    # Efficient large dataset storage
+pandas>=2.0.0                  # Logging results, CSV exports
+
+
+# ── Visualization ─────────────────────────────────────────────────
+matplotlib>=3.7.0              # Plots, reconstruction comparisons
+seaborn>=0.12.0                # Statistical plots for paper figures
+
+
+# ── Utilities ─────────────────────────────────────────────────────
+PyYAML>=6.0                    # Config files for experiments
+omegaconf>=2.3.0               # Hierarchical config management
+requests>=2.28.0               # Downloading datasets if needed
+
+
+# ── Notebook Support (optional but recommended) ───────────────────
+jupyter>=1.0.0
+ipywidgets>=8.0.0
