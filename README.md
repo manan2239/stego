@@ -6,7 +6,7 @@ This project evolves through three major phases:
 
 1. **Classical Steganography (LSB-based)**
 2. **Deep Learning Steganography (CNN Encoder–Decoder)**
-3. **Implicit Neural Representations (INRs — completed)**
+3. **Implicit Neural Representations (INRs)**
 
 The goal is to provide a unified playground for research, experimentation, and demonstration of cross-modal steganographic systems.
 
