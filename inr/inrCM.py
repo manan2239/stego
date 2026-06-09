@@ -8,16 +8,16 @@ Supported modalities: image, audio, video, text (TXT)
 
 USAGE:
   # Hide audio inside image
-  python cross_modal_inr.py --modal1 image.png --modal2 audio.wav --mode hide --key 42
+  python inrCM.py --modal1 image.png --modal2 audio.wav --mode hide --key 42
 
   # Extract secret back
-  python cross_modal_inr.py --modal2 audio.wav --mode extract --key 42 --weights output/siren_weights.pth
+  python inrCM.py --modal2 audio.wav --mode extract --key 42 --weights output/siren_weights.pth
 
   # Hide image inside video (low quality for CPU)
-  python cross_modal_inr.py --modal1 video.mp4 --modal2 image.png --mode hide --key 7 --quality low
+  python inrCM.py --modal1 video.mp4 --modal2 image.png --mode hide --key 7 --quality low
 
   # Override quality
-  python cross_modal_inr.py --modal1 image.png --modal2 audio.wav --mode hide --key 42 --quality high
+  python inrCM.py --modal1 image.png --modal2 audio.wav --mode hide --key 42 --quality high
 """
 
 import torch
