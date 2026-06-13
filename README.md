@@ -95,3 +95,27 @@ This phase is **compute-intensive**. A GPU is strongly recommended for usable re
 - Achieve truly **cross-modal steganography**, where different data types (image, audio, text, video) can be embedded into each other via learned INR models
 
 ---
+
+## Steganalysis
+
+`steganalysis.py` is a unified, blind steganalysis tool covering all three project phases (LSB, CNN, INR). Given a cover and stego image, it computes imperceptibility metrics (PSNR, SSIM, MSE, SNR, UQI, NCC, BER), runs classical detection tests (Chi-square, RS analysis), analyses entropy, bit-planes, and frequency-domain noise, and produces a rule-based detection verdict.
+
+Currently supports **image inputs only** (LSB and CNN outputs, plus image-modality INR outputs). Audio/video/text steganalysis for the INR module is planned as a separate extension.
+
+### Usage
+
+```bash
+python steganalysis.py --cover cover.png --stego stego.png
+python steganalysis.py --cover cover.png --stego stego.png --mode inr --secret secret.png
+python steganalysis.py --cover cover.png --stego stego.png --plot results --output report.json
+```
+
+| Flag | Description |
+|---|---|
+| `--cover` / `--stego` | Required input images |
+| `--secret` | Optional payload image for cover-vs-secret comparison |
+| `--mode` | `lsb` \| `cnn` \| `inr` \| `auto` (default) |
+| `--output` | Save full JSON metrics report |
+| `--plot` | Save visual report PNG (prefix name) |
+
+Full pipeline breakdown: [`steganalysis_architecture.md`](./steganalysis_architecture.md)
