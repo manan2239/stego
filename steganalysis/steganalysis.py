@@ -1,8 +1,9 @@
 """
-
-         UNIFIED STEGANALYSIS TOOLKIT — Group 02, IUST Kashmir  
-         Cross-Modal Steganography Final Year Project             
-         Covers: LSB  · CNN  · INR         
+╔══════════════════════════════════════════════════════════════════╗
+║         UNIFIED STEGANALYSIS TOOLKIT — Group 02, IUST Kashmir    ║
+║         Cross-Modal Steganography Final Year Project             ║
+║         Covers: LSB (Sem 6) · CNN (Sem 7) · INR (Sem 8)          ║
+╚══════════════════════════════════════════════════════════════════╝
 
 Usage:
     python steganalysis.py --cover <path> --stego <path> [options]
@@ -623,7 +624,7 @@ def generate_plots(cover: np.ndarray, stego: np.ndarray,
     ax.set_facecolor("#111122")
     rs_data = metrics.get("rs_analysis", {})
     if rs_data:
-        chs = list(rs_data.keys())
+        chs = [c for c in rs_data.keys() if isinstance(rs_data[c], dict)]
         payloads = [rs_data[c].get("estimated_payload_fraction", 0) * 100 for c in chs]
         ax.bar(chs, payloads, color=channel_colors[:len(chs)], alpha=0.8)
         ax.axhline(5, color="yellow", linestyle="--", alpha=0.5, linewidth=0.8)
@@ -979,7 +980,7 @@ def print_report(metrics: dict):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Unified Steganalysis Toolkit"
+        description="Unified Steganalysis Toolkit — IUST Kashmir Group 02"
     )
     parser.add_argument("--cover",   required=True, help="Path to cover image")
     parser.add_argument("--stego",   required=True, help="Path to stego image")
