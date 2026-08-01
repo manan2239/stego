@@ -862,7 +862,7 @@ def print_report(metrics: dict):
               border_style="blue", header_style="bold cyan")
     t.add_column("Metric", style="white")
     t.add_column("Value", justify="right")
-    t.add_column("Threshold", justify="center", style="dim")
+    t.add_column("Threshold (GOOD/OK)", justify="center", style="dim")
     t.add_column("Status", justify="center")
 
     def status(val, good, ok, higher_is_better=True):
