@@ -1,6 +1,6 @@
 """
 Usage:
-    python main.py <method> [method-specific args...]
+    python uniStego.py <method> [method-specific args...]
 
 Methods:
     lsb            Text-in-image LSB steganography      -> lsb/lsbText.py
@@ -10,19 +10,19 @@ Methods:
     steganalysis   Blind steganalysis on a stego image    -> steganalysis/steganalysis.py
 
 Examples:
-    python main.py lsb embed --cover cover.png --text "hello" --out stego.png
-    python main.py lsb extract --stego stego.png
+    python uniStego.py lsb embed --cover cover.png --text "hello" --out stego.png
+    python uniStego.py lsb extract --stego stego.png
 
-    python main.py cnn train --cover cover.png --secret secret.png --epochs 40
-    python main.py cnn embed --cover cover.png --secret secret.png --out stego.png
-    python main.py cnn extract --stego stego.png --out recovered.png
+    python uniStego.py cnn train --cover cover.png --secret secret.png --epochs 40
+    python uniStego.py cnn embed --cover cover.png --secret secret.png --out stego.png
+    python uniStego.py cnn extract --stego stego.png --out recovered.png
 
-    python main.py inr --modal1 cover.png --modal2 secret.txt --mode hide --key 42 --quality medium
+    python uniStego.py inr --modal1 cover.png --modal2 secret.txt --mode hide --key 42 --quality medium
 
-    python main.py audio embed cover.png secret.wav --out stego.png
-    python main.py audio extract stego.png --out recovered.wav
+    python uniStego.py audio embed cover.png secret.wav --out stego.png
+    python uniStego.py audio extract stego.png --out recovered.wav
 
-    python main.py steganalysis --cover cover.png --stego stego.png
+    python uniStego.py steganalysis --cover cover.png --stego stego.png
 """
 import sys
 import subprocess
