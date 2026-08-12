@@ -33,7 +33,7 @@ Steganography is the practice of concealing information within another medium su
 
 
 
-A unified `main.py` CLI dispatcher routes commands to the appropriate module, and a shared steganalysis engine (`steganalysis.py`) evaluates the imperceptibility and detectability of the output of any phase.
+A unified `uniStego.py` CLI dispatcher routes commands to the appropriate module, and a shared steganalysis engine (`steganalysis.py`) evaluates the imperceptibility and detectability of the output of any phase.
 
 \---
 
@@ -112,9 +112,9 @@ For Phase 3 (INR), on a machine without a dedicated GPU, Google Colab's free-tie
 ### Unified CLI
 
 ```
-python main.py --phase lsb --mode hide --cover cover.png --secret secret.txt --output stego.png  
-python main.py --phase cnn --mode hide --cover cover.png --secret secret.png  
-python main.py --phase inr --mode hide --modal1 cover.png --modal2 secret.txt --key 42 --quality medium
+python uniStego.py --phase lsb --mode hide --cover cover.png --secret secret.txt --output stego.png  
+python uniStego.py --phase cnn --mode hide --cover cover.png --secret secret.png  
+python uniStego.py --phase inr --mode hide --modal1 cover.png --modal2 secret.txt --key 42 --quality medium
 ```
 
 ### Phase 3 example (Colab)
@@ -170,7 +170,7 @@ stego/
 │   └── inrCM.py  
 ├── steganalysis/               \\# Unified steganalysis engine  
 │   └── steganalysis.py  
-├── main.py                     \\# Unified CLI dispatcher  
+├── uniStego.py                     \\# Unified CLI dispatcher  
 ├── steganalysis\\\\\\\_architecture.md  
 ├── LICENSE  
 └── README.md
